@@ -11,7 +11,7 @@ def generate_number(N: int, M: int, prefix=None):
     '''
     prefix = prefix or []
     if M == 0:
-        print(prefix)
+        print(*prefix,sep='')
         return
     for digit in range(N):
         if digit in prefix:
@@ -20,4 +20,4 @@ def generate_number(N: int, M: int, prefix=None):
         generate_number(N,M-1,prefix)
         prefix.pop()
 
-generate_number(8,8)
+generate_number(3,3)
